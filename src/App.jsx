@@ -399,6 +399,21 @@ export const App = () => {
             </div>
           </div>
         </section>
+        <section className="ui-section-form">
+          <div className="ui-form-container">
+            <h2>Design Better</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur lit, enimad eiusmod tempor
+              incididunt ut labore et dolore magna aliqua ullamco laboris nisi
+            </p>
+            <form action="" className="form">
+              <input type="email" placeholder="Email" className="input-email" />
+              <button className="ui-component-button ui-component-button-primary ui-component-button-normal form-button">
+                Join Waitlist
+              </button>
+            </form>
+          </div>
+        </section>
       </main>
       <footer role="contentinfo" className="ui-section-footer">
         <div className="ui-layout-container">

@@ -23,7 +23,8 @@ TABLE OF CONTENT
 |  7.5 PRICING
 |  7.6 TESTIMONIAL
 |  7.7 CLOSE
-|  7.8 FOOTER
+|  7.8 FORM
+|  7.9 FOOTER
 8.0 MEDIA
 |  8.1 768PX
 |  8.2 1024PX
@@ -666,7 +667,42 @@ input[name="toggle"] {
 
 /*--------------------------------------------------------------
 |
-| 7.8 FOOTER
+| 7.8 FORM
+|
+--------------------------------------------------------------*/
+
+.ui-section-form {
+  background-color: var(--ui-color-background-primary);
+  padding-bottom: 5rem;
+  padding-top: 5rem;
+}
+.ui-form-container {
+  text-align: center;
+  margin: auto;
+  max-width: 400px;
+}
+.form {
+  background-color: var(--ui-color-background-secondary);
+  width: 350px;
+  margin: auto;
+  padding: 0.4rem;
+  border-radius: var(--ui-radius-button);
+  display: flex;
+  justify-content: center;
+}
+.input-email {
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+.form-button {
+  width: 140px;
+  cursor: pointer;
+}
+/*--------------------------------------------------------------
+|
+| 7.9 FOOTER
 |
 --------------------------------------------------------------*/
 
