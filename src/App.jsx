@@ -1,5 +1,5 @@
 import FechaActual from "./components/FechaActual";
-
+import ImageOptimized from "./components/ImageOptimizated";
 export const App = () => {
   return (
     <>
@@ -93,12 +93,7 @@ export const App = () => {
                 </div>
               </div>
               {/* <!-- IMAGE --> */}
-              <img
-                src="https://res.cloudinary.com/uisual/image/upload/assets/devices/ipad.png"
-                loading="lazy"
-                alt="#"
-                className="ui-image-half-right"
-              />
+              <ImageOptimized classImage="ui-image-half-right" />
             </div>
           </div>
         </section>
@@ -137,11 +132,7 @@ export const App = () => {
           <div className="ui-layout-container">
             <div className="ui-section-feature__layout ui-layout-grid ui-layout-grid-2">
               {/* <!-- IMAGE --> */}
-              <img
-                src="https://res.cloudinary.com/uisual/image/upload/assets/devices/ipad.png"
-                alt="#"
-                className="ui-image-half-left"
-              />
+              <ImageOptimized classImage="ui-image-half-left" />
               {/* <!-- FEATURE --> */}
               <div>
                 <h2>Nice Features</h2>
@@ -193,11 +184,7 @@ export const App = () => {
                 </ul>
               </div>
               {/* <!-- IMAGE --> */}
-              <img
-                src="https://res.cloudinary.com/uisual/image/upload/assets/devices/ipad.png"
-                alt="#"
-                className="ui-image-half-right"
-              />
+              <ImageOptimized classImage="ui-image-half-right" />
             </div>
           </div>
         </section>
@@ -210,7 +197,7 @@ export const App = () => {
               type="radio"
               name="toggle"
               id="ui-component-toggle__monthly"
-              checked
+              defaultChecked
             />
             <input
               type="radio"
@@ -394,7 +381,7 @@ export const App = () => {
           <div className="ui-layout-container">
             <div className="ui-layout-column-6 ui-layout-column-center">
               <h2>Ready to start?</h2>
-              <p className="ui-text-intro">{<FechaActual />}</p>
+              {<FechaActual />}
               {/* <!-- CTA --> */}
               <div className="ui-component-cta ui-layout-flex">
                 <a

@@ -32,17 +32,17 @@ const FechaActual = () => {
     ];
 
     /********************************************************************/
-    /* Optenemos el dia en string consiguiendo en Indice del Array days en conjunto con el metodo getDay*/
+    /* Optenemos el dia en string consiguiendo el Indice del Array days en conjunto con el metodo getDay*/
     const dayOfWeek = days[currentDate.getDay()];
     /* Optenemos el dia del mes en number consiguiendo con el metodo getDate*/
     const dayOfMonth = currentDate.getDate();
-    /* Optenemos el mes en string consiguiendo en Indice del Array months en conjunto con el metodo getMonth*/
+    /* Optenemos el mes en string consiguiendo el Indice del Array months en conjunto con el metodo getMonth*/
     const month = months[currentDate.getMonth()];
     /* Optenemos el año en number consiguiendo con el metodo getFullYear */
     const year = currentDate.getFullYear();
     return `${dayOfWeek}, ${dayOfMonth} de ${month} de ${year}`;
   };
-  return <div>{fechaActual()}</div>;
+  return <p className="ui-text-intro">{fechaActual()}</p>;
 };
 
 export default FechaActual;
