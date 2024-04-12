@@ -1,3 +1,5 @@
+import FechaActual from "./components/FechaActual";
+
 export const App = () => {
   return (
     <>
@@ -392,9 +394,7 @@ export const App = () => {
           <div className="ui-layout-container">
             <div className="ui-layout-column-6 ui-layout-column-center">
               <h2>Ready to start?</h2>
-              <p className="ui-text-intro">
-                Lorem ipsum dolor sit amet consectetur.
-              </p>
+              <p className="ui-text-intro">{<FechaActual />}</p>
               {/* <!-- CTA --> */}
               <div className="ui-component-cta ui-layout-flex">
                 <a
