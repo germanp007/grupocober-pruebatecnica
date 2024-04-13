@@ -2,20 +2,34 @@ import { useState } from "react";
 
 const Form = () => {
   const [email, setEmail] = useState("");
+  const [validation, setValidation] = useState(null);
   const handleChange = (e) => {
-    e.preventDefault();
     setEmail(e.target.value);
+    setValidation(null);
   };
-
+  console.log(validation);
   const handleSubmit = (e) => {
     e.preventDefault();
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      console.log("Please enter a valid email address");
-      return false;
-    } else {
-      console.log(`You've successfully signed up`);
+      setValidation(false);
+      return;
     }
+    setValidation(true);
+    return;
+    // try {
+    //   const response = await fetch("enviar-correo", {
+    //     method: "POST",
+    //     headers: { "Content-Type": "application/json" },
+    //     body: JSON.stringify({ email }),
+    //   });
+    //   if (!response.ok) {
+    //     throw new Error("Error en el servidor");
+    //   }
+    //   alert("Correcto! El correo ha sido enviado.");
+    // } catch (error) {
+    //   console.error(error.message);
+    // }
   };
 
   return (
@@ -27,7 +41,8 @@ const Form = () => {
       </p>
       <form className="form" onSubmit={handleSubmit}>
         <input
-          type="email"
+          type="text"
+          name="email"
           placeholder="Email"
           className="input-email"
           onChange={(e) => handleChange(e)}
@@ -36,6 +51,14 @@ const Form = () => {
           Join Waitlist
         </button>
       </form>
+      {validation === false && email.length > 0 && (
+        <h3 style={{ color: "tomato" }}>
+          Error: Por favor, ingresa un email válido
+        </h3>
+      )}
+      {validation === true && email.length > 0 && (
+        <h3 style={{ color: "green" }}>Éxito: El email es válido</h3>
+      )}
     </div>
   );
 };
