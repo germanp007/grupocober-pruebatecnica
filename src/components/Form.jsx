@@ -7,29 +7,27 @@ const Form = () => {
     setEmail(e.target.value);
     setValidation(null);
   };
-  console.log(validation);
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       setValidation(false);
       return;
     }
-    setValidation(true);
-    return;
-    // try {
-    //   const response = await fetch("enviar-correo", {
-    //     method: "POST",
-    //     headers: { "Content-Type": "application/json" },
-    //     body: JSON.stringify({ email }),
-    //   });
-    //   if (!response.ok) {
-    //     throw new Error("Error en el servidor");
-    //   }
-    //   alert("Correcto! El correo ha sido enviado.");
-    // } catch (error) {
-    //   console.error(error.message);
-    // }
+    try {
+      const response = await fetch("enviar-correo", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      if (!response.ok) {
+        throw new Error("Error en el servidor");
+      }
+      alert("Correcto! El correo ha sido enviado.");
+      setValidation(true);
+    } catch (error) {
+      console.error(error.message);
+    }
   };
 
   return (
