@@ -11,10 +11,11 @@ const Form = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
+    if (!emailRegex.test(email) || email.length == "") {
       setValidation(false);
       return;
     }
+
     setValidation(true);
     try {
       const response = await axios.post(
@@ -23,10 +24,13 @@ const Form = () => {
           email,
         }
       );
-      if (!response.ok) {
+      if (response.status >= 200 && response.status < 300) {
+        // La solicitud fue exitosa
+        setEmail("");
+      } else {
+        // La solicitud no fue exitosa, lanzar un error
         throw new Error("Error en el servidor");
       }
-      setEmail("");
     } catch (error) {
       console.error(error.message);
     }
