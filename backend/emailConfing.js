@@ -1,9 +1,10 @@
 import nodemailer from "nodemailer";
-//import { config } from "../config";
+//import { config } from "../config.js";
+
 //Crear el Transporte ////
 
 const GMAIL = "pintogerman281@gmail.com";
-const GMAIL_PASSWORD = "thiw gdll qzgh enri";
+const GMAIL_PASSWORD = "thiw gdll qzgh enri"; // Clave de seguridad para acceder a la cuenta de correo electrónico
 
 export const transporter = nodemailer.createTransport({
   service: "gmail",
