@@ -151,6 +151,10 @@ html {
   box-sizing: inherit;
 }
 
+* {
+  transition: all 0.3s ease-in-out;
+}
+
 body {
   background-color: var(--ui-color-background-primary);
   color: var(--ui-color-typography-body);
@@ -178,6 +182,7 @@ h2,
 p,
 ul {
   margin-top: 0;
+  color: var(--ui-color-brand);
 }
 
 h1,
@@ -217,7 +222,9 @@ strong {
 small {
   font-size: var(--ui-typography-s);
 }
-
+.ui-text-intro {
+  color: var(--ui-color-brand);
+}
 .ui-text-note {
   /* color: var(--ui-color-typography-note); */
   /* Decidi cambiar este color porq con el gradient no se veia bien */
@@ -714,6 +721,9 @@ input[name="toggle"] {
 .ui-section-testimonial--author {
   line-height: 1.25;
 }
+.ui-layout-column-4 > p {
+  color: var(--ui-color-brand);
+}
 
 /*--------------------------------------------------------------
 |
@@ -726,6 +736,11 @@ input[name="toggle"] {
   padding-bottom: 5rem;
   padding-top: 5rem;
   text-align: center;
+}
+
+.ui-layout-column-6 > h2,
+p {
+  color: #282828;
 }
 
 /*--------------------------------------------------------------
@@ -764,7 +779,9 @@ input[name="toggle"] {
   margin-left: 1rem;
   color: var(--ui-color-brand);
 }
-
+.ui-form-container > p {
+  color: var(--ui-color-brand);
+}
 .form-button {
   width: 140px;
   cursor: pointer;
@@ -772,6 +789,7 @@ input[name="toggle"] {
   color: white;
   background: #282828;
 }
+
 /*--------------------------------------------------------------
 |
 | 7.9 FOOTER
