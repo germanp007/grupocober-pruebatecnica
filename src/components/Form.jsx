@@ -3,6 +3,7 @@ import axios from "axios";
 const Form = () => {
   const [email, setEmail] = useState("");
   const [validation, setValidation] = useState(null);
+
   const handleChange = (e) => {
     setEmail(e.target.value);
     setValidation(null);
@@ -14,9 +15,10 @@ const Form = () => {
       setValidation(false);
       return;
     }
+    setValidation(true);
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/enviar-correo",
+        "http://localhost:8080/api/enviar-correo",
         {
           email,
         }
@@ -24,9 +26,7 @@ const Form = () => {
       if (!response.ok) {
         throw new Error("Error en el servidor");
       }
-
-      alert("Correcto! El correo ha sido enviado.");
-      setValidation(true);
+      setEmail("");
     } catch (error) {
       console.error(error.message);
     }
@@ -42,8 +42,8 @@ const Form = () => {
       <form className="form" onSubmit={(e) => handleSubmit(e)}>
         <input
           type="text"
-          value={email}
           placeholder="Email"
+          value={email}
           className="input-email"
           onChange={(e) => handleChange(e)}
         />

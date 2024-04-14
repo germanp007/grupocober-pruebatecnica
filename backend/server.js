@@ -1,8 +1,9 @@
 import express from "express";
 import cors from "cors";
+//import { config } from "../config.js";
 //import nodemailer from "nodemailer";
 const server = express();
-const PORT = 3000;
+const PORT = 8080;
 // const GMAIL = "pintogerman281@gmail.com";
 // const GMAIL_PASSWORD = "thiw gdll qzgh enri";
 server.use(cors());
