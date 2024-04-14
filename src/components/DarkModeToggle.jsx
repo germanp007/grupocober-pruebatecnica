@@ -29,11 +29,8 @@ export default function DarModeToggle() {
     <div>
       <input type="checkbox" className="checkbox" id="checkbox" />
       <label htmlFor="checkbox" className="checkbox-label">
-        {/* <FontAwesomeIcon icon="fa-sharp fa-solid fa-sun" /> */}
-        {/* <i className="fas fa-sun"></i> */}
         <img src={sun} alt="light" className="fa-sun" />
         <img src={moon} alt="dark" className="fa-moon" />
-        {/* <i className="fa-sharp fa-solid fa-sun" style={{ color: "white" }}></i> */}
         <span className="ball"></span>
       </label>
     </div>

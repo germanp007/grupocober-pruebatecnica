@@ -1,4 +1,3 @@
-import DarModeToggle from "./components/DarkModeToggle";
 import FechaActual from "./components/FechaActual";
 import Form from "./components/Form";
 import Header from "./components/Header";
@@ -8,7 +7,6 @@ export const App = () => {
     <>
       <main role="main">
         <Header />
-        <DarModeToggle />
         <section className="ui-section-hero">
           <div className="ui-layout-container">
             <div className="ui-section-hero__layout ui-layout-grid ui-layout-grid-2">

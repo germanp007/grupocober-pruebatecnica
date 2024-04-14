@@ -1,3 +1,5 @@
+import DarModeToggle from "./DarkModeToggle";
+
 const Header = () => {
   return (
     <header role="banner" className="ui-section-header">
@@ -34,6 +36,8 @@ const Header = () => {
             role="navigation"
             className="ui-section-header--nav ui-layout-flex"
           >
+            {/* <!-- Toggle --> */}
+            <DarModeToggle />
             <a
               href="#"
               role="link"
