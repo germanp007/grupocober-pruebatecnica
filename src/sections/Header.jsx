@@ -1,4 +1,4 @@
-import DarModeToggle from "./DarkModeToggle";
+import DarModeToggle from "../components/DarkModeToggle";
 
 const Header = () => {
   return (
