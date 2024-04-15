@@ -1,8 +1,11 @@
-# React + Vite
+# Prueba Tecnica Grupo Cober
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Se realizaron todas las tareas propuestas en la Prueba Tecnica
 
-Currently, two official plugins are available:
+Me tome la libertad de crear una funcionalidad extra de dark-light mode
+Migre el proyecto html/css /js a React + Vite para mejor performance y codigo mas moderno, separados en componentes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+En localHost funciona todo perfecto, pero en Vercel la parte del backend se desplego perfectamente, pero me da un error q no envia el correo creo q es algun CORS o variables de entorno porq la configuracion la hice todo bien
+
+- [Prueba-Cober](https://cober-front.vercel.app/) Link FRONTEND
+- [@vitejs/plugin-react-swc](https://cober-backend-louhvbejq-germanp007s-projects.vercel.app/) LINK BACKEND
