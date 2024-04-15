@@ -35,36 +35,12 @@ export default function DarModeToggle() {
     }
   }, []);
 
-  // const setToggle = (e) => {
-  //   if (!e.target.checked) {
-  //     setDarkMode();
-  //   } else {
-  //     setLightMode();
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   const savedTheme = localStorage.getItem("theme");
-  //   if (savedTheme) {
-  //     setChecked(savedTheme === "dark");
-  //   }
-  // }, []);
-  // useEffect(() => {
-  //   localStorage.setItem("theme", checked ? "dark" : "light");
-  //   if (!checked) {
-  //     document.querySelector("html")?.classList.add("dark");
-  //   } else {
-  //     document.querySelector("html")?.classList.remove("dark");
-  //   }
-  // }, [checked]);
-
   return (
     <div>
       <input
         type="checkbox"
         className="checkbox"
         id="checkbox"
-        // value={darkMode}
         checked={!darkMode}
         onChange={setToggle}
       />
