@@ -4,7 +4,7 @@ import { transporter } from "./emailConfing.js";
 //import { config } from "../config.js";
 //import nodemailer from "nodemailer";
 const server = express();
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 //const GMAIL = "pintogerman281@gmail.com";
 // const GMAIL_PASSWORD = "thiw gdll qzgh enri";
 server.use(cors());
