@@ -21,8 +21,8 @@ server.post("/api/enviar-correo", async (req, res) => {
     const { email } = req.body;
     const result = await transporter.sendMail({
       from: "pintogerman281@gmail.com",
-      to: "pintogerman281@gmail.com",
-      // to: "admin@grupocober.online",
+      //to: "pintogerman281@gmail.com",
+      to: "admin@grupocober.online",
       subject: "nuevo suscriptor",
       html: `
       <head>
