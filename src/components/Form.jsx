@@ -19,7 +19,7 @@ const Form = () => {
     setValidation(true);
     try {
       const response = await axios.post(
-        "https://cober-backend-louhvbejq-germanp007s-projects.vercel.app/api/enviar-correo",
+        "http://localhost:8080/api/enviar-correo",
         {
           email,
         }

@@ -1,10 +1,10 @@
 import express from "express";
 import cors from "cors";
 import { transporter } from "./emailConfing.js";
-//import { config } from "../config.js";
+import { config } from "./config.js";
 //import nodemailer from "nodemailer";
 const server = express();
-const PORT = process.env.PORT || 8080;
+const PORT = config.server.PORT_BACK;
 //const GMAIL = "pintogerman281@gmail.com";
 // const GMAIL_PASSWORD = "thiw gdll qzgh enri";
 server.use(cors());
@@ -21,8 +21,8 @@ server.post("/api/enviar-correo", async (req, res) => {
     const { email } = req.body;
     const result = await transporter.sendMail({
       from: "pintogerman281@gmail.com",
-      //to: "pintogerman281@gmail.com",
-      to: "admin@grupocober.online",
+      to: "pintogerman281@gmail.com",
+      // to: "admin@grupocober.online",
       subject: "nuevo suscriptor",
       html: `
       <head>
